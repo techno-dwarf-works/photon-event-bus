@@ -1,0 +1,22 @@
+{
+  "name": "com.uurha.photoneventbus",
+  "displayName": "Photon Event Bus",
+  "version": "0.0.1",
+  "unity": "2018.3",
+  "description": "Extension for Photon Networking RaiseEvent system",
+  "dependencies": {
+  },
+  "author": {
+    "name": "Arcueid D'athemon",
+    "url": "https://github.com/uurha"
+  },
+  "changelogUrl": "https://github.com/uurha/RaiseEventBus",
+  "documentationUrl": "https://github.com/uurha/RaiseEventBus/tree/main#readme",
+  "license": "MIT",
+  "licensesUrl":"https://github.com/uurha/RaiseEventBus/blob/main/LICENSE",
+  "keywords": [
+    "networking",
+    "photon networking",
+    "extension"
+  ]
+}

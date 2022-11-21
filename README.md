@@ -1,4 +1,4 @@
-# PackageTemplate
+# RaiseEventBus
 
 ## Install
 Project Settins -> Package Manager -> Scoped registries
@@ -18,4 +18,4 @@ Project Settins -> Package Manager -> Scoped registries
   ]
 ```
 
-Window -> PackageManager -> Packages: My Registries -> Arcueid Plugins -> [Plugin name]
+Window -> PackageManager -> Packages: My Registries -> Arcueid Plugins -> Photon Event Bus
