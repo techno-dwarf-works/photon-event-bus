@@ -65,11 +65,11 @@ jobs:
 
     # Deploy to local repo
     - name: Deploy
-      uses: s0/git-publish-subdir-action@77ba3d841ebd413837b5e72676bd9e54e537f3f8
+      uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
         BRANCH: upm
-        FOLDER: Assets/Plugins/${GITHUB_REPOSITORY#*/}
+        FOLDER: Assets/Plugins/${{ github.event.repository.name }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SKIP_EMPTY_COMMITS: true
         MESSAGE: "{msg}"
