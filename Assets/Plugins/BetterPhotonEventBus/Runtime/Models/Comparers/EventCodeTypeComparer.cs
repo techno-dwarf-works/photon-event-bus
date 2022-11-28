@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using RaiseEventBus.Runtime.Models.EventTypes;
+using BetterPhotonEventBus.Models.EventTypes;
 
-namespace RaiseEventBus.Runtime.Models.Comparers
+namespace BetterPhotonEventBus.Models.Comparers
 {
     public class EventCodeTypeComparer : IEqualityComparer<EventCodeType>
     {

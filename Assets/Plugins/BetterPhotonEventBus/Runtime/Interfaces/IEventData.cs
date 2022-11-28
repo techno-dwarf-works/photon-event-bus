@@ -1,4 +1,4 @@
-namespace RaiseEventBus.Runtime.Interfaces
+namespace BetterPhotonEventBus.Interfaces
 {
     /// <summary>
     /// Interface represents data types for Networking

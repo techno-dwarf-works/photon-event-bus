@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RaiseEventBus.Runtime.Models.Comparers
+namespace BetterPhotonEventBus.Models.Comparers
 {
     public class NetworkPlayerComparer : IEqualityComparer<NetworkPlayer>
     {

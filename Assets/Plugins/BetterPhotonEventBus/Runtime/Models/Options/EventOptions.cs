@@ -1,4 +1,4 @@
-namespace RaiseEventBus.Runtime.Models.Options
+namespace BetterPhotonEventBus.Models.Options
 {
     public struct EventOptions
     {

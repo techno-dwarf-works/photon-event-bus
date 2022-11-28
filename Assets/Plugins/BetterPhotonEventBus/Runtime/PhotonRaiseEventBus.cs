@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BetterPhotonEventBus.Interfaces;
+using BetterPhotonEventBus.Models;
+using BetterPhotonEventBus.Models.Comparers;
+using BetterPhotonEventBus.Models.EventTypes;
+using BetterPhotonEventBus.Models.Options;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
-using RaiseEventBus.Runtime.Interfaces;
-using RaiseEventBus.Runtime.Models;
-using RaiseEventBus.Runtime.Models.Comparers;
-using RaiseEventBus.Runtime.Models.EventTypes;
-using RaiseEventBus.Runtime.Models.Options;
 
-namespace RaiseEventBus.Runtime
+namespace BetterPhotonEventBus
 {
     [Serializable]
     public class PhotonRaiseEventBus : IOnEventCallback

@@ -1,6 +1,6 @@
 using System;
 
-namespace RaiseEventBus.Runtime.Models.EventTypes
+namespace BetterPhotonEventBus.Models.EventTypes
 {
     public class EventCodeType
     {

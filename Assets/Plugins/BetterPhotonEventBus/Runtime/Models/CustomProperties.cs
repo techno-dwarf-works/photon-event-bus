@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace RaiseEventBus.Runtime.Models
+namespace BetterPhotonEventBus.Models
 {
     public class CustomProperties : Dictionary<object, object>
     {

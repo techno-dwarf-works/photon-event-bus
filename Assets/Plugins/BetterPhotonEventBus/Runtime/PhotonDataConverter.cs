@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Linq;
+using BetterPhotonEventBus.Models;
+using BetterPhotonEventBus.Models.Options;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
-using RaiseEventBus.Runtime.Models;
-using RaiseEventBus.Runtime.Models.Options;
-using NetworkPlayer = RaiseEventBus.Runtime.Models.NetworkPlayer;
+using NetworkPlayer = BetterPhotonEventBus.Models.NetworkPlayer;
 
-namespace RaiseEventBus.Runtime
+namespace BetterPhotonEventBus
 {
     public static class PhotonDataConverter
     {
