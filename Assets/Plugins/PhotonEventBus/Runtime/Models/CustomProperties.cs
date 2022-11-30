@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BetterPhotonEventBus.Models
+namespace Better.Plugins.PhotonEventBus.Runtime.Models
 {
     public class CustomProperties : Dictionary<object, object>
     {

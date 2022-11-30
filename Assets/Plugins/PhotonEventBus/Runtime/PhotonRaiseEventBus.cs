@@ -1,48 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BetterPhotonEventBus.Interfaces;
-using BetterPhotonEventBus.Models;
-using BetterPhotonEventBus.Models.Comparers;
-using BetterPhotonEventBus.Models.EventTypes;
-using BetterPhotonEventBus.Models.Options;
+using Better.Plugins.PhotonEventBus.Runtime.Interfaces;
+using Better.Plugins.PhotonEventBus.Runtime.Models.Comparers;
+using Better.Plugins.PhotonEventBus.Runtime.Models.EventTypes;
+using Better.Plugins.PhotonEventBus.Runtime.Models.Options;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine;
+using NetworkPlayer = Better.Plugins.PhotonEventBus.Runtime.Models.NetworkPlayer;
 
-namespace BetterPhotonEventBus
+namespace Better.Plugins.PhotonEventBus.Runtime
 {
     [Serializable]
     public class PhotonRaiseEventBus : IOnEventCallback
     {
         private Dictionary<EventCodeType, Delegate> _eventsDictionary;
         private HashSet<Type> _registeredEventTypes;
+        private HashSet<byte> _registeredByteCodes;
 
         public void Initialize()
         {
             _eventsDictionary = new Dictionary<EventCodeType, Delegate>(new EventCodeTypeComparer());
             _registeredEventTypes = new HashSet<Type>();
 
-            PhotonPeer.RegisterType(typeof(NetworkPlayer), (byte)'N', SerializeNetworkPlayer, DeserializeNetworkPlayer);
+            _registeredByteCodes = new HashSet<byte>()
+            {
+                (byte)'N', (byte)'W', (byte)'V', (byte)'Q', (byte)'P'
+            };
+
+            PhotonPeer.RegisterType(typeof(NetworkPlayer), (byte)'N', PhotonDataConverter.SerializeNetworkPlayer,
+                PhotonDataConverter.DeserializeNetworkPlayer);
             PhotonNetwork.AddCallbackTarget(this);
-        }
-
-        private object DeserializeNetworkPlayer(StreamBuffer inStream, short length)
-        {
-            var index = 0;
-            var buffer = new byte[length];
-            inStream.Read(buffer, 0, length);
-            var vo = PhotonDataConverter.DeserializePlayer(buffer, ref index);
-
-            return vo;
-        }
-
-        private short SerializeNetworkPlayer(StreamBuffer outStream, object customObject)
-        {
-            var buffer = Array.Empty<byte>();
-            PhotonDataConverter.Serialize((NetworkPlayer)customObject, ref buffer);
-            outStream.Write(buffer, 0, buffer.Length);
-            return (short)buffer.Length;
         }
 
         public void Deconstruct()
@@ -64,6 +54,19 @@ namespace BetterPhotonEventBus
         /// <typeparam name="T"></typeparam>
         public void RegisterEventType<T>(byte code) where T : IEventData
         {
+            if (_registeredByteCodes.Contains(code))
+            {
+                Debug.LogError($"Key code: {code} already registered.");
+                return;
+            }
+            
+            var type = typeof(T);
+            if (_registeredEventTypes.Contains(type))
+            {
+                Debug.LogError($"Type: {type} already registered.");
+                return;
+            }
+
             Serializer.RegisterCustomType<T>(code);
             RegisterEventType<T>();
         }

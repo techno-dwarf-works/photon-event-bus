@@ -1,6 +1,6 @@
 using System;
 
-namespace BetterPhotonEventBus.Models.EventTypes
+namespace Better.Plugins.PhotonEventBus.Runtime.Models.EventTypes
 {
     public class EventCodeType
     {

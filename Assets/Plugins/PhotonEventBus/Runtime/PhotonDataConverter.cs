@@ -1,16 +1,34 @@
 ﻿using System;
 using System.Linq;
-using BetterPhotonEventBus.Models;
-using BetterPhotonEventBus.Models.Options;
+using Better.Plugins.PhotonEventBus.Runtime.Models;
+using Better.Plugins.PhotonEventBus.Runtime.Models.Options;
 using ExitGames.Client.Photon;
 using Photon.Pun;
 using Photon.Realtime;
-using NetworkPlayer = BetterPhotonEventBus.Models.NetworkPlayer;
+using NetworkPlayer = Better.Plugins.PhotonEventBus.Runtime.Models.NetworkPlayer;
 
-namespace BetterPhotonEventBus
+namespace Better.Plugins.PhotonEventBus.Runtime
 {
     public static class PhotonDataConverter
     {
+        public static object DeserializeNetworkPlayer(StreamBuffer inStream, short length)
+        {
+            var index = 0;
+            var buffer = new byte[length];
+            inStream.Read(buffer, 0, length);
+            var vo = DeserializePlayer(buffer, ref index);
+
+            return vo;
+        }
+
+        public static short SerializeNetworkPlayer(StreamBuffer outStream, object customObject)
+        {
+            var buffer = Array.Empty<byte>();
+            Serialize((NetworkPlayer)customObject, ref buffer);
+            outStream.Write(buffer, 0, buffer.Length);
+            return (short)buffer.Length;
+        }
+        
         public static int GetPhotonOwnerID(this NetworkPlayer networkPlayer)
         {
             return networkPlayer.OwnerID;

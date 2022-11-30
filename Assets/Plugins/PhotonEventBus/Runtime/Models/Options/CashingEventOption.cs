@@ -1,4 +1,4 @@
-namespace BetterPhotonEventBus.Models.Options
+namespace Better.Plugins.PhotonEventBus.Runtime.Models.Options
 {
     public enum CashingEventOption
     {
