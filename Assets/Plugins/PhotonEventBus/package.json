@@ -1,10 +1,11 @@
 {
-  "name": "com.uurha.photoneventbus",
+  "name": "com.uurha.betterphotoneventbus",
   "displayName": "Photon Event Bus",
   "version": "0.0.1",
   "unity": "2018.3",
   "description": "Extension for Photon Networking RaiseEvent system",
   "dependencies": {
+    "com.ms-lima.photonserializer": "0.3.2"
   },
   "author": {
     "name": "Arcueid D'athemon",

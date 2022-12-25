@@ -1,9 +1,10 @@
 {
-    "name": "RaiseEventBus",
-    "rootNamespace": "",
+    "name": "PhotonEventBus",
+    "rootNamespace": "Better",
     "references": [
         "GUID:57c32fc907df0f54e8e6e8f0d2488336",
-        "GUID:831409e8f9d13b5479a3baef9822ad34"
+        "GUID:831409e8f9d13b5479a3baef9822ad34",
+        "GUID:b823fffcdb9df5d4891c5712d73df6b6"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
