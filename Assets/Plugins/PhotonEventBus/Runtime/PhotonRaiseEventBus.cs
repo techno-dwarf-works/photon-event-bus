@@ -6,6 +6,7 @@ using Better.Plugins.PhotonEventBus.Runtime.Models.Comparers;
 using Better.Plugins.PhotonEventBus.Runtime.Models.EventTypes;
 using Better.Plugins.PhotonEventBus.Runtime.Models.Options;
 using ExitGames.Client.Photon;
+using MSLIMA.Serializer;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;

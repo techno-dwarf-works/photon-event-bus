@@ -3,6 +3,7 @@ using System.Linq;
 using Better.Plugins.PhotonEventBus.Runtime.Models;
 using Better.Plugins.PhotonEventBus.Runtime.Models.Options;
 using ExitGames.Client.Photon;
+using MSLIMA.Serializer;
 using Photon.Pun;
 using Photon.Realtime;
 using NetworkPlayer = Better.Plugins.PhotonEventBus.Runtime.Models.NetworkPlayer;
