@@ -15,7 +15,8 @@ Project Settins -> Package Manager -> Scoped registries
       "name": "Arcueid Plugins",
       "url": "https://package.openupm.com",
       "scopes": [
-        "com.uurha"
+        "com.uurha",
+        "com.ms-lima",
       ]
     }
   ]
