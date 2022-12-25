@@ -1,4 +1,4 @@
-namespace Better.Plugins.PhotonEventBus.Runtime.Interfaces
+namespace Better.PhotonEventBus.Runtime.Interfaces
 {
     /// <summary>
     /// Interface represents data types for Networking

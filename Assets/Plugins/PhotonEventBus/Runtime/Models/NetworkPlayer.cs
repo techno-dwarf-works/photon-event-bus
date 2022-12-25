@@ -1,6 +1,6 @@
 using System;
 
-namespace Better.Plugins.PhotonEventBus.Runtime.Models
+namespace Better.PhotonEventBus.Runtime.Models
 {
     [Serializable]
     public readonly struct NetworkPlayer
