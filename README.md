@@ -1,5 +1,7 @@
 # RaiseEventBus
 
+This is custom wrapper for Photon RaiseEvent system.
+
 ## Install
 Project Settins -> Package Manager -> Scoped registries
 </br>
