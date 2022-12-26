@@ -1,7 +1,7 @@
 {
   "name": "com.uurha.betterphotoneventbus",
   "displayName": "Photon Event Bus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "unity": "2018.3",
   "description": "Extension for Photon Networking RaiseEvent system",
   "dependencies": {
