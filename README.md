@@ -4,22 +4,4 @@
 This is custom wrapper for Photon RaiseEvent system.
 
 ## Install
-Project Settins -> Package Manager -> Scoped registries
-</br>
-
-![image](https://user-images.githubusercontent.com/22265817/197618796-e4f99403-e119-4f35-8320-b233696496d9.png)
-
-```json
-"scopedRegistries": [
-    {
-      "name": "Arcueid Plugins",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.uurha",
-        "com.ms-lima",
-      ]
-    }
-  ]
-```
-
-Window -> PackageManager -> Packages: My Registries -> Arcueid Plugins -> Photon Event Bus
+[How to install](https://github.com/uurha/BetterPluginCollection/wiki/How-to-install)
